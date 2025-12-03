@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "afe3acd9-b233-4d43-b4f7-5c780e011794",
+		"name": "System Control 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43107919",
+		"_collection_link": "https://universal-desert-641029.postman.co/workspace/Team-Workspace~8ae339c8-5aed-49d5-8740-345fadcdece8/collection/43107919-afe3acd9-b233-4d43-b4f7-5c780e011794?action=share&source=collection_link&creator=43107919"
+	},
+	"item": [
+		{
+			"name": "Health api_gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/health",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health service_orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/v1/orders/health",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"orders",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health service_users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/v1/users/health",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email@email.ru\",\r\n    \"password\": \"S123\",\r\n    \"name\": \"Sonchik\",\r\n    \"role\": \"engineer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/v1/users/register",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"Admin123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/v1/users/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjY2NlZjY0MS1kM2ZlLTQ1NTEtYWE1ZS0yYmEwZDk0ODE1M2QiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLnJ1IiwibmFtZSI6IlNvbmNoaWsiLCJyb2xlIjoiZW5naW5lZXIiLCJpYXQiOjE3NjQ3MTA3NTQsImV4cCI6MTc2NDc5NzE1NH0.0UKmDmKxrDxSQVAgLlXbrJIZlf3D019qsUiH60fp54w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/v1/users/profile",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjY2NlZjY0MS1kM2ZlLTQ1NTEtYWE1ZS0yYmEwZDk0ODE1M2QiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLnJ1IiwibmFtZSI6IlNvbmNoaWsiLCJyb2xlIjoiZW5naW5lZXIiLCJpYXQiOjE3NjQ3MTA3NTQsImV4cCI6MTc2NDc5NzE1NH0.0UKmDmKxrDxSQVAgLlXbrJIZlf3D019qsUiH60fp54w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sonchik1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/v1/users/profile",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3M2MxNWViNi1mNmQxLTRjNjMtOTY4ZS04YTFlZjUzYTUyMjQiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmFtZSI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY0NzExMjk2LCJleHAiOjE3NjQ3OTc2OTZ9.gIvHboh0VMydeP9IQhBXf-ic79IkRuGHQqu887pjRG4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/v1/users/users",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3M2MxNWViNi1mNmQxLTRjNjMtOTY4ZS04YTFlZjUzYTUyMjQiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmFtZSI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY0NzExMjk2LCJleHAiOjE3NjQ3OTc2OTZ9.gIvHboh0VMydeP9IQhBXf-ic79IkRuGHQqu887pjRG4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/v1/users/users/73c15eb6-f6d1-4c63-968e-8a1ef53a5224",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"users",
+						"73c15eb6-f6d1-4c63-968e-8a1ef53a5224"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users by ID Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjFhNWUxZC0yNzdhLTQyMjctOWZmOC00MjUxNTBmYjQzMjciLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmFtZSI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzY0NzA4MzM5LCJleHAiOjE3NjQ3OTQ3Mzl9.TMzYzHq15xEDA4XOQTIRYhAB2c-ctXrUYY-pabhbbg4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/v1/users/users/ddf797e1-32e8-47bb-bcf6-5df5538d0519",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"users",
+						"ddf797e1-32e8-47bb-bcf6-5df5538d0519"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ZGVlNjYyNi03Mzg3LTQ1NTItODdlZi03NTA2NmFjMDM5NjMiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmFtZSI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY0NzEzMzcwLCJleHAiOjE3NjQ3OTk3NzB9.uzfeyoqYdvVXx_vNFiXjijz-TWyoTtPoa9bN9I-gcfQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"prod-001\",\r\n      \"name\": \"Ноутбук\",\r\n      \"quantity\": 1,\r\n      \"price\": 150000\r\n    },\r\n    {\r\n      \"productId\": \"prod-002\", \r\n      \"name\": \"Мышь\",\r\n      \"quantity\": 2,\r\n      \"price\": 2500\r\n    }\r\n  ],\r\n  \"totalAmount\": 155000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/v1/orders/orders",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"orders",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ZGVlNjYyNi03Mzg3LTQ1NTItODdlZi03NTA2NmFjMDM5NjMiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmFtZSI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY0NzEzMzcwLCJleHAiOjE3NjQ3OTk3NzB9.uzfeyoqYdvVXx_vNFiXjijz-TWyoTtPoa9bN9I-gcfQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/v1/orders/orders",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"orders",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change status",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNmVkY2JmOS04ZmIwLTRmYTMtYmNlMS1iOWZlYzJlMDE5NmQiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLnJ1IiwibmFtZSI6IlNvbmNoaWsiLCJyb2xlIjoiZW5naW5lZXIiLCJpYXQiOjE3NjQ3MTQwNDYsImV4cCI6MTc2NDgwMDQ0Nn0.vGd4ZvqyU8IqjrGyHhO_hx1VYTo1ljfV8uqI7nPhSxQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"in_progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/v1/orders/orders/a6d19b12-1125-4bab-820b-b1913c5f0e57/status",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"orders",
+						"orders",
+						"a6d19b12-1125-4bab-820b-b1913c5f0e57",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8000",
+			"type": "default"
+		}
+	]
+}
