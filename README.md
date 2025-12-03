@@ -24,19 +24,24 @@ Pino для логирования
 PostgreSQL (заготовка)
 
 Быстрый старт
-bash
+bash 
 # Клонирование
+```
 git clone <репозиторий>
 cd system-control
+```
 
 # Настройка окружения
+```
 cp api_gateway/.env.example api_gateway/.env
 cp service_users/.env.example service_users/.env
 cp service_orders/.env.example service_orders/.env
-
+```
 # Запуск
+```
 docker-compose up --build
-Роли пользователей
+```
+# Роли пользователей
 user - создание и отмена своих заказов
 
 engineer - изменение статусов заказов
